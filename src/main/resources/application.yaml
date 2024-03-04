@@ -1,0 +1,25 @@
+spring:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+  datasource:
+    url: "jdbc:h2:mem:retail_database"
+    driverClassName: "org.h2.Driver"
+    username: "sa"
+    password: ""
+    
+extra-source:
+  url: "http://localhost:8081"
+
+logging:
+  level:
+    root: info
+    com.zenyatta: info
